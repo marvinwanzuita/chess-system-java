@@ -132,7 +132,7 @@ public class UI {
 
     System.out.println("Captured pieces: ");
 
-    System.out.print("Red: ");
+    System.out.print("Red : ");
     System.out.print(ANSI_RED);
     System.out.println(Arrays.toString(red.toArray()));
     System.out.print(ANSI_RESET);
