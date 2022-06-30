@@ -3,6 +3,7 @@ package JavaCompleto.ChessSystem.chess;
 import JavaCompleto.ChessSystem.boardgame.Board;
 import JavaCompleto.ChessSystem.boardgame.Piece;
 import JavaCompleto.ChessSystem.boardgame.Position;
+import JavaCompleto.ChessSystem.chess.pieces.Bishop;
 import JavaCompleto.ChessSystem.chess.pieces.King;
 import JavaCompleto.ChessSystem.chess.pieces.Pawn;
 import JavaCompleto.ChessSystem.chess.pieces.Rook;
@@ -192,7 +193,9 @@ public class ChessMatch {
   private void initialSetup(){
 
     placeNewPiece('a', 1, new Rook(board, Color.RED));
+    placeNewPiece('c', 1, new Bishop(board, Color.RED));
     placeNewPiece('e', 1, new King(board, Color.RED));
+    placeNewPiece('f', 1, new Bishop(board, Color.RED));
     placeNewPiece('h', 1, new Rook(board, Color.RED));
     placeNewPiece('a', 2, new Pawn(board, Color.RED));
     placeNewPiece('b', 2, new Pawn(board, Color.RED));
@@ -204,7 +207,9 @@ public class ChessMatch {
     placeNewPiece('h', 2, new Pawn(board, Color.RED));
 
     placeNewPiece('a', 8, new Rook(board, Color.BLUE));
+    placeNewPiece('c', 8, new Bishop(board, Color.BLUE));
     placeNewPiece('e', 8, new King(board, Color.BLUE));
+    placeNewPiece('f', 8, new Bishop(board, Color.BLUE));
     placeNewPiece('h', 8, new Rook(board, Color.BLUE));
     placeNewPiece('a', 7, new Pawn(board, Color.BLUE));
     placeNewPiece('b', 7, new Pawn(board, Color.BLUE));
