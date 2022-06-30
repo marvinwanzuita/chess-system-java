@@ -1,9 +1,11 @@
 package JavaCompleto.ChessSystem.application;
 
+import JavaCompleto.ChessSystem.chess.ChessMatch;
 import JavaCompleto.ChessSystem.chess.ChessPiece;
 import JavaCompleto.ChessSystem.chess.ChessPosition;
 import JavaCompleto.ChessSystem.chess.Color;
 
+import javax.swing.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -50,6 +52,13 @@ public class UI {
     }
   }
 
+  public static void printMatch(ChessMatch chessMatch){
+    printBoard(chessMatch.getPieces());
+    System.out.println();
+    System.out.println("Turn: " + chessMatch.getTurn());
+    System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
+  }
+
 
   public static void printBoard(ChessPiece[][] pieces){
 
@@ -92,7 +101,7 @@ public class UI {
       System.out.print("-" + ANSI_RESET);
     }
     else {
-      if (piece.getColor() == Color.WHITE) {
+      if (piece.getColor() == Color.RED) {
         System.out.print(ANSI_RED + piece + ANSI_RESET);
       }
       else {
